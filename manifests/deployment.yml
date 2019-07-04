@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shclubazchcaptureorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shclubazchcaptureorder 
+    spec:
+      containers:
+        - name: shclubazchcaptureorder 
+          image: jakeleeacr112.azurecr.io/shclubazchcaptureorder 
+          ports:
+          - containerPort: 8080
